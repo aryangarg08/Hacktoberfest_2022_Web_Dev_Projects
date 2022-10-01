@@ -1,0 +1,346 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="awesome blog made my iset manipal">
+    <meta name="keywords" content=" web dev blog, web dev blog, iste manipal">
+<!-- <link rel="stylesheet" href="../public/blog.css"> -->
+    <title>My Blog</title>
+
+    <style>
+        #main-header{
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+        #main-footer{
+            text-align: center;
+            font-size: 18px;
+        }
+        /* The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+        * {
+          box-sizing: border-box;/*This means: When you set the width/height of an element, the element often appears bigger than you have set (because the element's border and padding are added to the element's specified width/height).*/
+        }
+        a {
+          text-decoration: none;
+        } /* same style can be applied to elements separated by commas */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Nunito", sans-serif;
+          letter-spacing: 1px;
+        }html {
+          background-color: #E0E0E0;
+        }
+        body {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;/*fill available free space or shrinks them to prevent overflow. */
+          flex-direction: row;
+          flex-wrap: wrap;/*defines whether flex items are forced in single line or can be flowed into multiple lines   */
+          font-family: "Open Sans", sans-serif;
+        }
+        /* Selects all <header> elements where the parent is a <body> element :- */
+        body > header {
+          padding: 10%;/*top right bottom left*/
+          background-color: #2a7886;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+            width: 100vw;
+        }
+        /* Selects all <h1> elements inside <header> elements:- */
+        body > header h1 {
+          font-size: 2rem;
+          margin: 0;
+          margin-bottom: 0.75rem;
+        }
+        body > header p {
+          margin: 0;
+          font-size: 0.75rem;
+          font-weight: lighter;
+          font-style: oblique;
+        }
+        body > .top-nav {
+          width: 100%;
+          height: 10vh;
+          background-color: #1e555f;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        body > .top-nav ul {
+          padding: 0px;
+          list-style: none;
+        }
+        body > .top-nav ul li {
+          display: inline;
+        }
+        body > .top-nav ul li a {
+          letter-spacing: 0.5px;
+          color: white;
+          margin: 0 0.5rem;
+        }
+        body > .top-nav ul li a:hover {
+          color: #e6e6e6;
+        }
+        body > main {
+          width: 70%;
+          background: white;
+          padding: 2rem 4rem;
+        }
+        body > main h2 {
+          color: rgba(0, 0, 0, 0.75);
+        }
+        body > main article {
+          margin-bottom: 2rem;
+        }
+        body > main article h3 {
+          font-size: 1.25rem;
+          color: #1e555f;
+          margin: 0px;
+          margin-bottom: 0.75rem;
+        }
+        body > main article small {
+          color: #1e555f;
+          margin: 0px;
+          margin-bottom: 2rem;
+          font-family: Nunito;
+        }
+        body > main article p {
+          font-size: 1rem;
+          color: rgba(0, 0, 0, 0.75);
+          text-align: justify;/*Stretches the lines so that each line has equal width (like in newspapers and magazines)*/
+          margin: 0px;
+          line-height: 1.75rem;
+        }
+        body > main article p ~ a {
+          display: inline-block;
+          color: #369bad;
+          font-weight: 600;
+          margin-top: 0.5rem;
+          text-transform: uppercase;
+        }
+        body > main article p ~ a:after {
+          transition: 0.3s;
+          padding-left: 0.25rem;
+          content: "→";
+        }
+        body > main article p ~ a:hover:after {
+          padding-left: 0.75rem;
+        }
+        body > aside {
+          width: 30%;
+          padding: 2rem 4rem;
+          background: #eceff1;
+        }
+        body > aside .sidebar {
+          margin-bottom: 2rem;
+        }
+        body > aside .sidebar h2 {
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.75);
+          margin-bottom: 0.75rem;
+        }
+        body > aside .sidebar ul {
+          padding-left: 0;
+          list-style: none;
+        }
+        body > aside .sidebar ul li {
+          margin-bottom: 0.75rem;
+        }
+        body > aside .sidebar ul li a {
+          letter-spacing: 0.5px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+        body > .footer {
+          width: 100%;
+          text-align: center;
+          padding: 3rem;
+          background: #78909c;
+          color: white;
+        }/* *************************** to make the page responsive ****************************** */
+        @media only screen and (max-width: 768px) {
+          body main,
+        body aside {
+            width: 100%;
+            padding: 2rem;
+          }
+          body aside {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          body .sidebar {
+            width: 50%;
+          }
+          body aside .sidebar:nth-of-type(2n) {
+            text-align: right;
+          }
+        }/* *************************** additional css for form****************************** */
+        form {
+          width: 100%;
+          margin: 0 auto;
+          font-family: Nunito;
+          font-size: 1.2rem;
+        }
+        label,
+        input {
+          /* In order to define widths */
+          display: inline-block;
+          padding: 10px;
+          margin: 5px;
+        }
+        label {
+          width: 30%;
+          /* Positions the label text beside the input */
+          text-align: right;
+        }
+        label+input {
+          width: 30%;
+          /* Large margin-right to force the next element to the new-line
+                   and margin-left to create a gutter between the label and input */
+          margin: 0 30% 0 4%;
+        }
+        /* setting a default width of the text area */
+        textarea {
+          width: 300px;
+          height: 150px;
+        }
+        /* Only the submit button is matched by this selector,
+               but to be sure you could use an id or class for that button */
+
+        form button {
+          background-color: #1e555f; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin:auto;
+          display:block;
+          cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>Technology</h1>
+            <p>science of craft</p>
+        </hgroup>
+    </header>
+    <nav class="top-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#new-blog">Add new blog</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header>
+            <h2>Latest Articles</h2>
+        </header>
+        <div class="articles">
+        <article>
+                <h3>The Manhattan Project</h3>
+                <small>Posted by Insha on july 17</small>
+
+                <p>The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the United Kingdom and Canada.</p>
+                <a href="#">Read More</a>
+        </article>
+        <article>
+                <h3>The Manhattan Project</h3>
+                <small>Posted by Insha on july 17</small>
+
+                <p>The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the United Kingdom and Canada.</p>
+                <a href="#">Read More</a>
+        </article>
+        <article>
+                <h3>The Manhattan Project</h3>
+                <small>Posted by Insha on july 17</small>
+
+                <p>The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the United Kingdom and Canada.</p>
+                <a href="#">Read More</a>
+        </article>
+        <article>
+                <h3>The Manhattan Project</h3>
+                <small>Posted by Insha on july 17</small>
+
+                <p>The Manhattan Project was a research and development undertaking during World War II that produced the first nuclear weapons. It was led by the United States with the support of the United Kingdom and Canada.</p>
+                <a href="#">Read More</a>
+        </article>
+
+    </div>
+        <article>
+<header>
+    <h2 id="new-blog">Add a new blog</h2>
+</header>
+            <form class="form-add" role="form"  id="form">
+                <section class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Enter Your Blog Title">
+                  <label for="title">Author</label>
+                  <input type="text" name="author" class="form-control" id='author' placeholder="Your name?">
+                  <label for="title">Date</label>
+                  <input type="text" name="date" class="form-control" id="date" placeholder="Published on?">
+
+                  <label for="content">Content</label>
+                  <textarea name="content" class="form-control"  id="content" rows="20"></textarea>
+                </section>
+
+                <button class="btn btn-lg btn-primary btn-block" type="submit">Publish</button>
+
+            </form>
+
+        </article>
+    </main>
+
+    <aside>
+            <section class="sidebar">
+                <h2>Archives</h2>
+            <ul>
+                <li><a href="#">March 2018</a></li>
+                <li><a href="#">April 2018</a></li>
+                <li><a href="#">May 2018</a></li>
+                <li><a href="#">June 2018</a></li>
+                <li><a href="#">July 2018</a></li>
+                <li><a href="#">August 2018</a></li>
+                <li><a href="#">September 2018</a></li>
+                <li><a href="#">October 2018</a></li>
+            </ul>
+       <nav>
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#">Agriculture</a></li>
+                <li><a href="#">Automation</a></li>
+                <li><a href="#">Banking</a></li>
+                <li><a href="#">Computer</a></li>
+                <li><a href="#">Energy</a></li>
+                <li><a href="#">Medical</a></li>
+                <li><a href="#">Military</a></li>
+                <li><a href="#">Transportation</a></li>
+            </ul>
+        </nav>
+            </section>
+    </aside>
+    <footer class="footer">
+        <p>Made with <span style="color: #F44336;">&hearts;</span> by <a href="https://istemanipal.com">ISTE Manipal</a></p>
+        <p>&copy; All Rights Reserved. 2020 - 2021</p>
+    </footer>
+
+
+</body>
+</html>
