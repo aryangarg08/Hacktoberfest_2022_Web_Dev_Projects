@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Digital Analog Clock</title>
+    <style>
+        /* Layout */
+        .main {
+            display: flex;
+            padding: 2em;
+            height: 90vh;
+            justify-content: center;
+            align-items: middle;
+        }
+
+        .clockbox,
+        #clock {
+            width: 100%;
+        }
+
+        /* Clock styles */
+        .circle {
+            fill: none;
+            stroke: #000;
+            stroke-width: 9;
+            stroke-miterlimit: 10;
+        }
+
+        .mid-circle {
+            fill: #000;
+        }
+
+        .hour-marks {
+            fill: none;
+            stroke: #000;
+            stroke-width: 9;
+            stroke-miterlimit: 10;
+        }
+
+        .hour-arm {
+            fill: none;
+            stroke: #000;
+            stroke-width: 17;
+            stroke-miterlimit: 10;
+        }
+
+        .minute-arm {
+            fill: none;
+            stroke: #000;
+            stroke-width: 11;
+            stroke-miterlimit: 10;
+        }
+
+        .second-arm {
+            fill: none;
+            stroke: #000;
+            stroke-width: 4;
+            stroke-miterlimit: 10;
+        }
+
+        /* Transparent box ensuring arms center properly. */
+        .sizing-box {
+            fill: none;
+        }
+
+        /* Make all arms rotate around the same center point. */
+        /* Optional: Use transition for animation. */
+        #hour,
+        #minute,
+        #second {
+            transform-origin: 300px 300px;
+            transition: transform .5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="clockbox">
+            <svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+                <g id="face">
+                    <circle class="circle" cx="300" cy="300" r="253.9" />
+                    <path class="hour-marks"
+                        d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6" />
+                    <circle class="mid-circle" cx="300" cy="300" r="16.2" />
+                </g>
+                <g id="hour">
+                    <path class="hour-arm" d="M300.5 298V142" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="minute">
+                    <path class="minute-arm" d="M300.5 298V67" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="second">
+                    <path class="second-arm" d="M300.5 350V55" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+            </svg>
+        </div><!-- .clockbox -->
+    </main>
+
+</body>
+<script>
+    const HOURHAND = document.querySelector("#hour");
+    const MINUTEHAND = document.querySelector("#minute");
+    const SECONDHAND = document.querySelector("#second");
+
+    var date = new Date();
+    console.log(date);
+
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+
+
+    let hrPosition = hours * 360 / 12 + ((minutes * 360 / 60) / 12);
+    let minPosition = minutes * 360 / 60 + ((seconds * 360 / 60) / 60);
+    let secPosition = seconds * 360 / 60;
+
+    function runTheClock() {
+
+        hrPosition = hrPosition + (3 / 360);//for continous movement of hands of clock we have 360 degrees divided by total seconds 360/12/3600
+        minPosition = minPosition + (6 / 60);// 360/60/60
+        secPosition = secPosition + 6;//360/60
+
+        HOURHAND.style.transform = `rotate(${hrPosition}deg)`; //" rotate(' + hrPosition + '  deg) " `rotate(${hrPosition}deg)`;
+        MINUTEHAND.style.transform = `rotate(${minPosition}deg)`;//" rotate(' + minPosition + '  deg) ";
+        SECONDHAND.style.transform = `rotate(${secPosition}deg)`; //" rotate(' + secPosition + '  deg) ";
+    }
+
+    var run = setInterval(runTheClock, 1000);
+</script>
+
+</html>
