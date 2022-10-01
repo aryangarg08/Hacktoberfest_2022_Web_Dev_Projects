@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+
+        html, body {
+            padding-top: 50px;
+            height: auto;
+            width: auto;
+            background-color: rgb(173, 248, 223);
+            font-family: 'Bungee Spice', cursive;
+        }
+
+        .container {
+            border: 10px solid rgb(168, 228, 252);
+            border-collapse: collapse;
+            border-spacing: 10px 50px;
+            border-radius: 15px;
+            background-color: rgba(168, 228, 252, 0.651);
+        }
+
+
+        .button {
+            width: 66px;
+            padding: 20px;
+            margin: 0 3px;
+            border: 2px solid black;
+            border-radius: 9px;
+            cursor: pointer;
+            background-color: aqua;
+        }
+
+        .row {
+            margin: 8px 0;
+        }
+        .row input {
+            width: 291px;
+            height: 50px;
+            font-size: 23px;
+            margin: 0;
+            padding: 10px 0;
+            border: 2px solid black;
+            border-radius: 8px;
+            background-color: rgb(250, 250, 201);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .mx-auto {
+            margin: 100px;
+        }
+
+        .flex {
+            /* display: flex; */
+            display: inline-block;
+            margin-left: 40%;
+        }
+
+        .flex-col {
+            flex-direction: column;
+        }
+
+        .item-center {
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center">Calculator using HTML, CSS, and JavaScript</h1>
+    
+    <div class="container flex flex-col mx-auto item-center">
+        <div class="row">
+            <input type="text" class="input-text" disabled>
+        </div>
+        <div class="row">
+            <button class="button">C</button>
+            <button class="button">%</button>
+            <button class="button">M+</button>
+            <button class="button">M-</button>
+        </div>
+        <div class="row">
+            <button class="button">7</button>
+            <button class="button">8</button>
+            <button class="button">9</button>
+            <button class="button">/</button>
+        </div>
+        <div class="row">
+            <button class="button">4</button>
+            <button class="button">5</button>
+            <button class="button">6</button>
+            <button class="button">x</button>
+        </div>
+        <div class="row">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">-</button>
+        </div>
+        <div class="row">
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button">=</button>
+            <button class="button">+</button>
+        </div>
+    </div>
+    <script>
+        let input_str = " ";
+        let buttons = document.querySelectorAll('.button');
+        Array.from(buttons).forEach((button) => {
+            button.addEventListener('click', (e) => {
+                const input = e.target.innerHTML;
+                if (input == 'C') {
+                    input_str = ' ';
+                } else if (input == 'M+' || input == 'M-') {
+                    input_str = input === "M+" ? '+' + input_str : '-' + input_str
+                } else if (input == '%') {
+                    input_str = eval(input_str + '/ 100');
+                } else if (input != '=') {
+                    if (input == 'x')
+                        input_str += '*'
+                    else
+                        input_str += input;
+                } else {
+                    input_str = ' ' + eval(input_str)
+                }
+                document.querySelector('input').value = input_str
+            })
+        });
+    </script>
+</body>
+</html>
