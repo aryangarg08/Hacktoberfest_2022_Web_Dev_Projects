@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure App Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #12c2e9;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right,
+                    #f64f59,
+                    #c471ed,
+                    #12c2e9);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right,
+                    #f64f59,
+                    #c471ed,
+                    #12c2e9);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        div.container {
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.container div.row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.container div.row input {
+            height: 80px;
+            width: 80px;
+            margin: 10px;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        div.row1 button {
+            padding: 10px 15px;
+            outline: none;
+            border: 2px solid white;
+            background-color: #f64f59;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        div.row1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Azure Vm And Azure App Service
+    </h1>
+    <div class="container">
+        <div class="row">
+            <input type="text" id="input1">
+            <h1>+</h1>
+            <input type="text" id="input2">
+        </div>
+    </div>
+    <div class="row1">
+        <button id="calc" onclick="calc1()">Calculate The Sum</button>
+        <h2>Sum Is: <span id="sum"></span></h2>
+    </div>
+</body>
+<script>
+    let input1 = document.getElementById('input1');
+    let input2 = document.getElementById('input2');
+    let sum = document.getElementById('sum');
+    let calc = document.getElementById('calc');
+
+    function calc1() {
+        sum.innerText = parseInt(input1.value) + parseInt(input2.value);
+    }
+</script>
+
+</html>
