@@ -1,0 +1,13 @@
+.home{
+    height: 100vh;
+    background-image: url(Bitcoin-Crypto-Currency-Wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    
+
+}
+.home-Row{
+   justify-content: space-evenly;
+}

@@ -1,0 +1,11 @@
+import InternalInput from './Input';
+import Group from './Group';
+import Search from './Search';
+import TextArea from './TextArea';
+import Password from './Password';
+var Input = InternalInput;
+Input.Group = Group;
+Input.Search = Search;
+Input.TextArea = TextArea;
+Input.Password = Password;
+export default Input;
