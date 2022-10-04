@@ -1,0 +1,29 @@
+body{
+    background-color: #3D3D4A;
+    text-align:center;
+}
+/* Title  */
+
+#title{
+    padding-top:3%;
+}
+.title-heading{
+    font-size:8rem;
+    font-family: Lobster;
+    color:#50CAA2;
+    
+}
+
+/* Mid-section */
+
+#Mid-sec{
+    padding:7% 25%;
+}
+.player-head{
+    color:#50CAA2;
+    font-family:Shadows Into Light;
+    font-size:2.5rem;
+}
+.players-img{
+    padding:30px;
+}
