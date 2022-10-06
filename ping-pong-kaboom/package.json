@@ -1,0 +1,19 @@
+{
+  "name": "ping-pong-kaboom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html -p 8000"
+  },
+  "author": "ankeeta",
+  "license": "ISC",
+  "dependencies": {
+    "kaboom": "^2000.2.9",
+    "parcel": "^2.7.0",
+    "parcel-bundler": "^1.12.5"
+  },
+  "alias": {
+    "kaboom": "./node_modules/kaboom/dist/kaboom.mjs"
+  }
+}
