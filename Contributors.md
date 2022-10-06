@@ -15,3 +15,9 @@
 - Bio: Machine Learning and Python Enthusiast
 - GitHub: [abhishekgit03]((https://github.com/abhishekgit03)
 - Addition: Added a News Website built using HTML,CSS,JS and REST APIs.
+
+#### Name: [Tanay Dwivedi] (https://github.com/Tanay-Dwivedi)
+- Place: Kanpur, India
+- Bio: Mobile Application Developer
+- GitHub: [Tanay-Dwivedi]((https://github.com/Tanay-Dwivedi)
+- Addition: Added a Banking System App in Java programming language.
