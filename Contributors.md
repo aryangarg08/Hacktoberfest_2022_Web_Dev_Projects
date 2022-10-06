@@ -9,3 +9,9 @@
 - Bio: A kid obsessed with computers and communities.
 - GitHub: [Yuvraj004](https://github.com/JOS-RE)
 - Addition: Created a fun falling ball game.
+
+#### Name: [Abhishek Dasgupta] (https://github.com/abhishekgit03)
+- Place: Durgapur,India
+- Bio: Machine Learning and Python Enthusiast
+- GitHub: [abhishekgit03]((https://github.com/abhishekgit03)
+- Addition: Added a News Website built using HTML,CSS,JS and REST APIs.
