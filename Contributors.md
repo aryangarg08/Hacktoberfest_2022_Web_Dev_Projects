@@ -15,3 +15,9 @@
 - Bio: Machine Learning and Python Enthusiast
 - GitHub: [abhishekgit03]((https://github.com/abhishekgit03)
 - Addition: Added a News Website built using HTML,CSS,JS and REST APIs.
+
+#### Name: [Subhajit Gorai] (https://github.com/Subhajitongit)
+- Place: Durgapur,India
+- Bio: Software developer 
+- GitHub: [Subhajitongit]((https://github.com/Subhajitongit)
+- Addition: Added a Netflix clone using ReactJs and OMDB API.
