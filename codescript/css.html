@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS</title>
+     <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <center>
+    <h1>CSS</h1>
+    </center>
+    <p>The priority level for changing CSS is-</p>
+    <fieldset>
+      INLINE CSS > INTERNAL CSS > EXTERNAL CSS.
+    </fieldset>
+    <br>
+    <hr size = "3" noshade>
+    <p>But we are always advised to use the external CSS which is better among these
+    <br> If we use simultaneously inline , external and internal CSS then the priority will be given to the inline CSS
+    <br>and the rest will be croseed out.</p>
+
+    <h3>For more info use MDN docs</h3>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS#reference">MDN referenece for CSS</a>
+    <hr size = "3" noshade>
+    <h3>The syntax of external CSS</h3>
+    <fieldset>
+      selector{property : property value ;}
+    </fieldset>
+    <table cellspacing = "20">
+      <tr>
+        <td>SELECTOR </td>
+        <td> As in who, in whom you want changes in.</td>
+      </tr>
+      <tr>
+        <td>PROPERTY </td>
+        <td>As in what ,what you want to change </td>
+      </tr>
+      <tr>
+        <td>PROPERTY VALUE</td>
+        <td>As in how, how you wish to make a change in your property.</td>
+      </tr>
+    </table>
+    <p>The index elements:</p>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">KEYWORD INDEXES</a>
+    <hr size = "3" noshade>
+
+    <h3>SELECTORS</h3>
+    <h4>CLASS SELECTORS</h4>
+    <fieldset>
+      <p>Use class in a tag lets say ex; body, h1,p etc.. <br>Give the name form which you can refer to it in the external
+        CSS file <br>Use ('.') in front of the class name and then you can acess it as.
+      </p>
+    </fieldset>
+    <h4>ID SELECTORS</h4>
+    <fieldset>
+      <p>For ID selctors it is kinda similar to class selectors but in external CSS we use
+      (#) in fornt of the ID name .
+    </p>
+    </fieldset>
+    <p>
+      Well the only difference between them is ID selectors are unique you cannot use them again with the same reference
+      so you would use ID to identify elements where there is only one of them on a particular page. You will get to access it only once whereas
+      the class selectors can be addressed as many times you need.
+      <fieldset>
+        So use classes when you want to apply the same style to a group of
+        related items and use the ID to apply to a specific style to a single element on you web page.And these selectors
+        overrides the tag selectors.
+      </fieldset>
+    </p>
+    <hr SIZE = "5"noshade>
+    <p>Let's make CSS more interesting shall we? <br>
+     We are going to change the icon at the top of our website name, we will visit a site
+     <br><a href="https://www.favicon.cc/">FAVICON</a> You can create your icon from here.
+    <h3>The new tag - "div"</h3>
+    <p> A div stands for a  content division element , an it basically allows you to split up or divide
+     your content into separate containers or boxes so that you can affect the layout of each box separately. </p>
+    
+     <h3>The box model in CSS</h3>
+     <p>We know that every single HTML element is treated as box by css and by styling that box, changing its height/width, margin , padding, etc.
+     that's how we can change the layout of our website.</p>
+
+    <h3>Other topics:</h3>
+    <table cellspacing = "20">
+        <tr>
+          <td>Display elements</td>
+          <td>Block , Inline, Inline-Block , None</td>
+        </tr>
+        <tr>
+          <td>Positioning</td>
+          <td>static, relative and absolute</td>
+        </tr>
+    </table>
+  </body>
+</html>
