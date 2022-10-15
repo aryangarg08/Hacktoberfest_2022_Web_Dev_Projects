@@ -1,0 +1,42 @@
+['2021-07-31 14:57:28.967810']:Total number of active cases in central delhi is ('Central Delhi', 184)
+['2021-07-31 14:58:57.147573']:Total number of active cases in koderma is ('Koderma', 30)
+['2021-07-31 14:59:21.134412']:Total number of active cases in mumbai is ('Mumbai', 5402)
+['2021-07-31 15:00:32.922538']:Total number of active cases in south delhi is ('South Delhi', 70)
+['2021-07-31 15:07:00.873993']:Total number of active cases in north delhi  is None
+['2021-07-31 15:08:08.924502']:Total number of active cases in west delhi is ('West Delhi', 122)
+['2021-07-31 15:08:24.583938']:Total number of active cases in giridih is ('Giridih', 2)
+['2021-07-31 15:08:44.831771']:Total number of active cases in pakur is ('Pakur', 0)
+['2021-07-31 15:09:09.788024']:Total number of active cases in gautam buddha nagar is ('Gautam Buddha Nagar', 35)
+['2021-07-31 15:09:23.795657']:Total number of active cases in kolkata  is None
+['2021-07-31 15:09:45.702903']:Total number of active cases in patna is ('Patna', 70)
+['2021-07-31 15:10:02.089540']:Total number of active cases in kanpur is None
+['2021-07-31 15:10:22.543389']:Total number of active cases in varansi is None
+['2021-07-31 15:11:14.776891']:Total number of active cases in varanasi is ('Varanasi', 26)
+['2021-07-31 15:11:28.464128']:Total number of active cases in kanpur is None
+['2021-07-31 15:11:44.004364']:Total number of active cases in jashi is None
+['2021-07-31 15:11:53.511790']:Total number of active cases in jhashi is None
+['2021-07-31 15:12:20.916455']:Total number of active cases in rajgir is None
+['2021-07-31 15:12:36.112494']:Total number of active cases in bhagalpur is ('Bhagalpur', 12)
+['2021-07-31 15:12:47.623325']:Total number of active cases in chapra is None
+['2021-07-31 15:13:03.059763']:Total number of active cases in sasaram is None
+['2021-07-31 15:13:15.547801']:Total number of active cases in hajipur is None
+['2021-07-31 15:13:25.842235']:Total number of active cases in araria is ('Araria', 11)
+['2021-07-31 15:13:41.152676']:Total number of active cases in munnar is None
+['2021-07-31 15:13:54.806112']:Total number of active cases in wayanad is ('Wayanad', 6654)
+['2021-07-31 15:14:05.236742']:Total number of active cases in dhanbad is ('Dhanbad', 16)
+['2021-07-31 15:14:17.496973']:Total number of active cases in ranchi is ('Ranchi', 49)
+['2021-07-31 15:14:30.179407']:Total number of active cases in bokaro is ('Bokaro', 27)
+['2021-07-31 15:14:51.707254']:Total number of active cases in cuttak is None
+['2021-07-31 15:15:03.902487']:Total number of active cases in cuttack is ('Cuttack', 1893)
+['2021-07-31 15:15:16.424727']:Total number of active cases in surat is ('Surat', 32)
+['2021-07-31 15:15:28.789161']:Total number of active cases in pune is ('Pune', 16001)
+['2021-07-31 15:15:51.762014']:Total number of active cases in gandhinagar is ('Gandhinagar', 10)
+['2021-07-31 15:16:18.545073']:Total number of active cases in kumarakom is None
+['2021-07-31 15:16:33.432113']:Total number of active cases in kozhikode is ('Kozhikode', 21496)
+['2021-07-31 15:16:45.543947']:Total number of active cases in hampi is None
+['2021-07-31 15:16:55.975377']:Total number of active cases in mysuru is ('Mysuru', 1420)
+['2021-07-31 15:17:10.155817']:Total number of active cases in wayanad is ('Wayanad', 6654)
+['2021-07-31 15:17:38.483877']:Total number of active cases in tirupati is None
+['2021-07-31 15:18:13.021556']:Total number of active cases in tadepalligudem is None
+['2021-07-31 15:18:46.945025']:Total number of active cases in visakhapatnam is ('Visakhapatnam', 864)
+['2021-07-31 18:33:49.380010']:Total number of active cases in lucknow is ('Lucknow', 55)
