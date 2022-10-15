@@ -1,0 +1,87 @@
+<!--
+My first attempt at coding a game using html, css and jQuery. It's pretty random as far as games go. Just wanted to see if I could pull it off. Anyway... enjoy! :)
+
+Image assets are part of "Danc's Miraculously Flexible Game Prototyping Tiles"
+
+Sounds: Me :)
+-->
+
+<div class="wrapper">
+
+		  <img src="http://adrianpayne.me/game/assets/images/avatar.png" class="avatar" />
+		  <div class="speech-bubble"></div>
+		
+		  <div class="gameBoard">
+		
+		    <div class="gameover">
+				<h3>You scored</h3>
+				<span class="final-score"></span><br/>
+          <span>by @dazulu</span>
+		    </div>
+			
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+				
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+				
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+				
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+				
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+			<div class="gametile"></div>
+		  </div>
+		  <div class="sidebar">
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>    
+			  <div class="stone gametile"></div>
+			  <div class="stone gametile"></div>
+			  <div class="scoreBoard">
+				<h2 class="fancy-text">Score</h2>
+				<span class="score fancy-text"></span>
+				<div class="loot">
+					<ul class="lootracker">
+            <li><span class="gemcount">0</span> x <img src="http://adrianpayne.me/game/assets/images/gem.png"/></li>
+						<li><span class="starcount">0</span> x <img src="http://adrianpayne.me/game/assets/images/star.png"/></li>
+					</ul>
+				</div>
+			  </div>
+			  <a href="javascript:void(0)" class="button fancy-text reset">Reset board</a>
+		  </div>
+		</div>
+
+		<!-- Preload Game Sounds -->
+		<audio preload="auto" id="pop-1" >
+		  <source src="http://adrianpayne.me/game/assets/sounds/pop1.mp3"></source>
+			Your browser says no sound for you :(
+		</audio>
+		<audio preload="auto" id="pop-2" >
+		  <source src="http://adrianpayne.me/game/assets/sounds/pop2.mp3"></source>
+		</audio>
+		<audio preload="auto" id="gemfind" >
+      <source src="http://adrianpayne.me/game/assets/sounds/gem.mp3"></source>
+		</audio>
