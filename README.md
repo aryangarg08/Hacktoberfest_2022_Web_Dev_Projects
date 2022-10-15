@@ -1,2 +1,2 @@
-# Hacktoberfest_2022_Web_Dev_Projects
-A Repository For Hacktoberfest 2022 Pull Requests Where You Can Add Your Development Projects
+# covid-19-tracker-and-detector
+covid tracker and detector motive of project to stop spread of covid-19 virus
