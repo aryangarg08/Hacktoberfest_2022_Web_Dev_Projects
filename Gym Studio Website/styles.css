@@ -1,0 +1,152 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url('images/bg1.jpg');
+    height: 1000px;
+    color: white
+}
+/* 
+.left{
+    display: inline-block;
+    border: 2px solid red;
+    float: left;
+}
+
+.mid{    
+    display: inline-block;
+    border: 2px solid green;
+    margin-left: 600px;
+}
+
+.right{
+    display: inline-block;
+    border: 2px solid yellow;
+    float: right;
+    top:20px;
+}
+
+.mid .navbar{
+    display: inline-block;
+    overflow: auto;
+    height: 55px;
+    
+    background-color: cornflowerblue;
+    
+}
+
+.navbar ul{
+    overflow:auto;
+    margin-right: 20px;
+}
+
+li{
+    overflow:auto;
+    list-style: none;
+    margin-left:20px;
+    display: inline;
+}
+ */
+ .left {
+    display: inline-block;
+    position: absolute;
+    left: 60px;
+    top: 20px;
+}
+
+.left div {
+    line-height: 19px;
+    font-size: 26px;
+    text-align: center;
+}
+
+.mid {
+    display: block;
+    width: 36%;
+    margin: 29px auto;
+}
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 43px;
+    display: inline-block;
+}
+
+.navbar {
+    display: inline-block;
+}
+
+.navbar li{
+    display: inline-block;
+    font-size: 25px;
+}
+
+.navbar li a{
+    list-style: none;
+    text-decoration: none;
+    padding: 14px 13px;
+    cursor: pointer;
+    color: white;
+}
+
+.navbar li a:hover,.navbar li a.active{
+    text-decoration: underline;
+    color:darkkhaki
+}
+
+.left img{
+    width: 120px;
+    border-radius: 1000px;
+    height: 80px;
+}
+
+.btn{
+    background-color:antiquewhite;
+    padding: 5px 7px;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 18%;
+}
+
+.btn:hover{
+    background-color: darkcyan;
+}
+.container{
+    border-radius: 20px;
+    padding: 90px 80px;
+    margin: 20px 112px 40px;
+    width: 33%;
+    float:right;
+}
+
+.form-group input {
+    text-align: center;
+    display: inline-block;
+    width: 470px;
+    padding: 2px;
+    border: 2px solid black;
+    margin: 10px auto;
+    font-size: 25px;
+    border-radius: 8px;
+}
+
+h1{
+    text-align: center;
+    color: red;
+    font-size: 40px;
+    font-style: italic;
+}
+.container .btn{
+    display:inline-block;
+    width: 22%;
+    margin-left: 170px; 
+}
+/* 
+.foot{
+    bottom: 2px;
+    font-size: 15px;
+    color: white;
+    display: block;
+    margin: auto;
+    width: 30%;
+} */
