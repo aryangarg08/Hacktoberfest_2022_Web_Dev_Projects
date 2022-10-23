@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100 w-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <style>
+      * {
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+
+    <title>URSHO - Short URLs</title>
+  </head>
+  <body class="h-100 w-100 bg-dark">
+    <div
+      class="container d-flex flex-column justify-content-center align-items-center h-100 w-100"
+    >
+      <div>
+        <h1 class="text-center text-info fw-bolder display-3">
+          <span class="text-warning">UR</span>SHO
+        </h1>
+        <h4 class="text-center text-secondary">The URL Shortner</h4>
+      </div>
+
+      <div class="my-4 w-100 container text-center">
+        <a href="/">
+          <button class="btn btn-outline-secondary">Create a Short URL</button>
+        </a>
+      </div>
+
+      <div class="table-responsive container" style="max-width: 60rem">
+        <table class="table table-dark table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Full URL</th>
+              <th scope="col">Short URL</th>
+              <th scope="col">Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% shortUrls.forEach((shortUrl, key) => { %>
+            <tr>
+              <th scope="row"><%= key + 1 %></th>
+              <td>
+                <a href="<%= shortUrl.full %>" class="text-info"
+                  ><%= shortUrl.full %></a
+                >
+              </td>
+              <td>
+                <a href="<%= shortUrl.short %>" class="text-info"
+                  ><%= shortUrl.short %></a
+                >
+              </td>
+              <td><%= shortUrl.clicks %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function copyLink(link) {
+        navigator.clipboard.writeText(link);
+        alert("Link Copied!");
+      }
+    </script>
+  </body>
+</html>

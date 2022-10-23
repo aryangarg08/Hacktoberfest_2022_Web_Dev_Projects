@@ -1,0 +1,23 @@
+body {
+    background-image: url('bg.jpeg');
+    background-size: cover;
+    
+    background-attachment: fixed;
+    background-position: center;
+} 
+
+button {
+    border: solid #524b4b;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
