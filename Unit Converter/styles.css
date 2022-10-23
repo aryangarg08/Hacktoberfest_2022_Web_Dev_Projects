@@ -1,0 +1,35 @@
+#title{
+    
+    padding:6%;
+}
+#selectfr{
+    width:20%;
+}
+#selectto{
+    width:20%;
+}
+#desc{
+    margin-top: 3%;
+}
+#select1fr{
+    width:20%;
+}
+#select1to{
+    width:20%;
+}
+.row{
+    padding-bottom: 3%;
+    padding-top:1%;
+}
+#btn{
+    width:10%;
+    background-color: #48ada4;
+    border-color: #48ada4;
+}
+#resultp{
+    text-align: center
+}
+p{
+    font-family: 'Comfortaa', cursive;
+
+}
