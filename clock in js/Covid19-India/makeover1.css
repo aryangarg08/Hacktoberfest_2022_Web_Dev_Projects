@@ -1,0 +1,309 @@
+
+header{
+    
+    margin-top: 0;
+    height: 600px;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+}
+
+
+ul3 {
+  list-style-type: none;
+ margin-top: 0;
+  padding: 0;
+  overflow: hidden;
+  float: right;
+  
+}
+
+ul3 li {
+    margin-top: 0;
+
+}
+
+ul3 li a {
+    float: right;
+    margin-top: 0;
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul3 li a:hover {
+  background-color: #4CAF50;
+}
+
+.active  {
+    margin: 0;
+    }
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  margin-top:0;
+  text-align: left;
+  outline: none;
+  font-size: 3%;
+  transition: 0.4s;
+    float:right;
+}
+
+.active, .accordion {
+  margin-top: 0;
+}
+img{
+    margin-top:  0;
+    float:none;
+    float: left;
+    width:60px;
+    height: 60px;
+}
+h7{ font-family: century gothlic;
+    color:black;
+    font-size: 500%;
+    position:absolute;
+    top:35%;
+    left:30%;
+    right:30%;
+    
+}
+p{
+    
+    color:black;
+    font-size: 15px;
+    position:absolute;
+    top:52%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.container{
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+   background: #ff0;
+}
+.container .box{
+    position: relative;
+    width: calc(4oopx-3opx);
+    height:calc(300px-30px);
+    background: #000; 
+    float: left;
+    margin: 15px;
+    border: 2px;
+    border-color: black;
+        
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}header {
+  text-align: center;
+  animation: myanimation 15s infinite;
+}
+
+@keyframes myanimation {
+  0% {
+    background-color: #20B2AA;
+  }
+  25% {
+    background-color: #FF8C00;
+  }
+  50% {
+    background-color: #6495ED;
+  }
+  75% {
+    background-color: #F08080;
+  }
+  100% {
+    background-color: #20B2AA;
+  }
+}
+
+a {
+  color: white;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: center;
+  display: inline;
+  padding: 0px 30px 0px 10px;
+  color: #333333;
+  font-family: 'Sunflower', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: center;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap;
+  /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+/* Create four equal columns that sits next to each other */
+
+.column {
+  -ms-flex: 25%;
+  /* IE10 */
+  flex: 25%;
+  max-width: 33%;
+  padding: 0 4px;
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+p {
+  color: #231900;
+  font-family: 'Crimson Text';
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 48px;
+  margin-bottom: 48px;
+  max-width: 650px;
+}
+h12{
+    font-family: century gothlic;
+    color:black;
+    font-size: 300%;
+    position:absolute;
+    top:100%;
+    left:30%;
+    right:25%;
+    }
+.column {
+  position: relative;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 97%;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.column:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 150%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+    
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+#h3{
+    
+    font-family: CENTURY GOTHLIC;
+    position:absolute;
+    font-size:200%;
+    
+    
+}
+#link{
+    
+}
+#link:hover{
+    background-color: black;
+    
+    font-family:calibri;
+    font-size:200%;
+    color: green;
+    float:left;
+}
+
+h4{
+    font-family: CENTURY GOTHLIC;
+    position:absolute;
+    font-size:250%;
+    
+}
+a{
+    
+    font-family:calibri;
+    font-size:200%;
+    color: green;
+    float:left;
+}
+h3{
+    font-family: sans-serif;
+}
