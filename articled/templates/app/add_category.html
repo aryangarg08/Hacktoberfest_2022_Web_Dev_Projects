@@ -1,0 +1,36 @@
+{% extends 'app/home.html' %}
+
+
+{% block main_block %}
+
+{% load staticfiles %}
+
+
+<h1>AddCategory</h1>
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+<div id="overlay">
+		<div>
+
+			<a id="cross" href="/app/home">X</a>
+			<form method="post">
+				<table>
+					<caption>Add Your category</caption>
+					{% csrf_token %}
+					{{form.as_table}}
+					
+					<tr>
+						<td colspan="2" id="btn_box">
+							{% csrf_token %}
+							<input  id="btn" type="submit" value="Add" />
+								<a href="/app/home" id="btn_cancel" onclick="overlay()">Cancel</a>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+
+
+
+{% endblock %}

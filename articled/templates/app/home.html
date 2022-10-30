@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+{% load staticfiles %}
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  
+  <title>
+document
+	</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+ </head>
+ <body>
+ <div id="header">
+		<span id="icon">
+			<a href="/app/home" >
+				<img  id="logo" src="{% static 'images/pen2.png' %}"/>
+			</a>
+		</span>
+		<span id="ttl"><a href="/app/home" id="title_logo">Articled</a></span>
+
+		<span id="options1">
+			
+			<div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div>
+			
+				{% if request.session.login %}
+					{{request.user}}
+						<a href="/accounts/logout">logout</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="/app/profile">Profile</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="{% url 'add_post' %}">Add Post</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						<a href="{% url 'add_category' %}">Add Category</a>&nbsp;&nbsp;&nbsp;&nbsp;
+						
+						
+						
+				{% else%}
+					
+					<a href="/accounts/login"  id="option_logo"><img  id="login"    src="{% static 'images/login.jpg' %}"/>		login/register</a>
+		
+					
+				{% endif %}
+		</span>	 
+
+		
+		
+		
+ </div>
+
+
+		{% block menu_bar %}
+
+
+
+		{% endblock %}
+		
+ <div id="body">
+		{% block main_block %}
+		{% endblock %}  
+	</div>
+		
+
+ <div id="footer">
+			&copy;Articled since 2020
+ </div>
+
+<script src="{% static 'js/home.js' %}"></script>
+ 
+ </body>
+</html>

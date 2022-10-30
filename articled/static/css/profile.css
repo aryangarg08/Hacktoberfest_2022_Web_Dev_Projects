@@ -1,0 +1,51 @@
+#profile_pic{
+	background-color:#000000;
+	border:2px solid #33ccff;
+	border-radius: 90px;
+	width:180px;
+	height:180px;
+	margin: 40px auto;
+	margin-bottom:20px;
+	
+
+}
+#profile_pic img{
+	
+	
+	border-radius: 90px;
+	width:180px;
+	height:180px;
+
+
+}
+
+#box1{
+	background-color:#2c2c2c;
+	border:1.5px solid #33ccff;
+	border-radius: 5px;
+	width:50%;
+	height: 500px;
+	margin:30px auto;
+}
+
+#user_name{
+	color:#d6d6d6;
+	font-size:24px;
+	font-family: cursive;
+	margin: 10px auto;
+	text-align:center;
+
+}
+
+#user_email{
+	color:#9d9d9d;
+	font-size:16px;
+	font-family: cursive;
+	margin: 10px auto;
+	text-align:center;
+
+}
+
+#box2{
+	border:1.5px solid #33ccff;
+}

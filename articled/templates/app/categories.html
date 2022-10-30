@@ -1,0 +1,43 @@
+{% extends 'app/home.html' %}
+
+
+{% block main_block %}
+
+{% load staticfiles %}
+
+
+<h1>{{ cats }}</h1>
+
+<br/>
+{% if category_posts %}
+
+	{% for post in category_posts %}
+
+
+		<a href="{% url 'detail' post.pk %}">{{post.title}}</a>-------------
+		{{post.author}}------------<br/>
+		{{post.category}}
+		{{post.post_date}}
+		<!--{{post.author.first_name}} 
+		{{post.author.last_name}}--><br/>-----
+		
+		{% if request.session.login %}
+		<small><a href="{% url 'edit_post' post.pk %}">(Edit)</a></small>
+		<br/>
+		<a href="{% url 'delete_post' post.pk %}">(delete post)</a>
+		{% endif %}
+
+
+		{{post.author.email}}---
+		{{ post.body|slice:":200" }}....
+		<hr/>
+
+
+	{% endfor %}
+
+{% else %}
+ This is not a category!!!!
+{% endif%}
+
+
+{% endblock %}
