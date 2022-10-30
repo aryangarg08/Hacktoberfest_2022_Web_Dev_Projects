@@ -1,0 +1,22 @@
+{% extends 'app/home.html' %}
+
+{% block main_block %}
+
+{% load staticfiles %}
+<h1>Posts Details</h1>
+
+
+	{{object.title}}-------------<hr/>
+	BY:{{object.author}}------------<br />
+	{{object.post_date}}
+	<!--  {{object.author.first_name}}
+	{{object.author.last_name}}--------->
+	{{object.author.email}}<hr/>
+	{{object.body|safe}}
+
+	
+
+<a href="{% url 'home' %}">back</a>
+
+
+{% endblock %}

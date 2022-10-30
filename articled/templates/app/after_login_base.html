@@ -1,0 +1,17 @@
+{% extends 'app/home.html' %}
+
+
+{% block menu_bar %}
+
+	{% load staticfiles %}
+
+	<link rel="stylesheet" href="{% static 'css/menu.css' %}" type="text/css"/>
+
+	<div id="menu_bar">
+		<a  href="/app/dashboard">Dashboard</a>&nbsp;&nbsp;
+		<a  href="/app/home">home</a>&nbsp;&nbsp;
+		
+		
+
+	</div>
+{% endblock %}

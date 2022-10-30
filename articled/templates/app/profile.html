@@ -1,0 +1,47 @@
+{% extends 'app/after_login_base.html' %}
+
+{% block main_block %}
+
+{% load staticfiles %}
+
+	<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+
+	<!-- <script src="{% static 'js/profile.js' %}"></script> -->
+
+
+
+	<div id="box1">
+		
+
+		
+
+		<div id="box2">	
+			<!-- <div id="profile_pic"><img src="{{uf.profpic.url}}" height="100px" /></div> -->
+			<div id="profile_pic"><img src="{% static 'images/pen.jfif' %}" height="180px" width="180px"/></div>
+			<div id="user_name">{{request.user}}</div>
+			<div id="user_email">{{request.user.email}}</div>
+			
+		</div>
+	</div>
+ 
+	<form method="post" enctype="multipart/form-data">
+				<table>
+					<!-- <caption>Please fill your details {{request.session.uname}}</caption> -->
+					<caption>Please fill your details {{request.user.first_name}}</caption>
+
+					{{form.as_table}}
+				
+					
+					<tr id="sv_btn_box">
+						<td colspan="2" id="btn_box">
+							{% csrf_token %}
+							<input type="submit" value="Save Profile" id="btn" />
+						</td>			
+					</tr>
+				</table>
+			</form>
+
+<img src="{{uf.profpic.url}}" height="100px" /> 
+{% endblock %}
+

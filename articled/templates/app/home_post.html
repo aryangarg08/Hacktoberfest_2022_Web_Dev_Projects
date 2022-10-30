@@ -1,0 +1,29 @@
+{% extends 'app/home.html' %}
+
+{% block main_block %}
+
+{% load staticfiles %}
+<h1>Posts</h1>
+{% for post in object_list %}
+
+	<a href="{% url 'detail' post.pk %}">{{post.title}}</a>-------------
+	{{post.author}}------------<br/>
+	<a href="{% url 'category' post.category|slugify %}">{{post.category}}</a>-------------
+	{{post.post_date}}
+	<!--{{post.author.first_name}} 
+	{{post.author.last_name}}--><br/>-----
+	
+	{% if request.session.login %}
+	<small><a href="{% url 'edit_post' post.pk %}">(Edit)</a></small>
+	<br/>
+	<a href="{% url 'delete_post' post.pk %}">(delete post)</a>
+	{% endif %}
+
+
+	{{post.author.email}}---
+	{{ post.body|slice:":200" }}....
+	<hr/>
+
+{% endfor %}
+
+{% endblock %}

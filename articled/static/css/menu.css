@@ -1,0 +1,15 @@
+
+
+#menu_bar a:link,#menu_bar a:visited{
+	
+	text-decoration:overline;
+	margin-top:10px;
+	color:#31a5c6;
+}
+
+#menu_bar a:hover,#menu_bar a:active{
+	
+	text-decoration:underline;
+	margin-top:10px;
+	color:#aaaaaa;
+}

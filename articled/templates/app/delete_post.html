@@ -1,0 +1,38 @@
+{% extends 'app/home.html' %}
+
+
+{% block main_block %}
+
+{% load staticfiles %}
+
+
+<h1>Delete Post</h1>
+<link rel="stylesheet" type="text/css" href="{% static 'css/form.css' %}"/>
+<div id="overlay">
+		<div>
+
+			<a id="cross" href="/app/home">X</a>
+			<form method="post">
+				<table>
+					<caption>Delete Your Post</caption>
+					{% csrf_token %}
+					{{form.as_table}}
+					
+					<tr>
+						<td colspan="2" id="btn_box">
+							{% csrf_token %}
+							<strong>Are you sure?</strong>
+
+							<input  id="btn" type="submit" value="Delete Post!" />
+								<a href="/app/home" id="btn_cancel" onclick="overlay()">Cancel</a>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</div>
+
+
+
+
+{% endblock %}
